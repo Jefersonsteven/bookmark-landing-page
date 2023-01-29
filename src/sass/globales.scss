@@ -1,0 +1,26 @@
+$soft-nlue: hsl(231, 69%, 60%);
+$soft-red: hsl(0, 94%, 66%);
+$grayish-blue: hsl(229, 8%, 60%);
+$very-dark-blue: hsl(229, 31%, 21%);
+$white: #fff;
+$font: 'Rubik', sans-serif;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    font-family: $font;
+    width: 100vw;
+}
+
+.inactive {
+    display: none;
+}
