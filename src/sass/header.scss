@@ -6,8 +6,7 @@
     align-items: center;
     &__menu-container {
         &__menu {
-            // display: none;
-            display: flex;
+            display: none;
             align-items: center;
             flex-direction: column;
             position: absolute;
@@ -25,6 +24,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 list-style: none;
                 letter-spacing: 0.12em;
                 li {
@@ -61,6 +61,53 @@
                 padding-bottom: 30px;
                 img {
                     padding: 25px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1440px) {
+    .header {
+        padding: 30px 100px;
+        &__menu-container {
+            &--open {
+                display: none;
+            }
+            &__menu {
+                display: flex;
+                position: relative;
+                width: auto;
+                height: auto;
+                background-color: transparent;
+                &--close {
+                    display: none;
+                }
+                &__redes {
+                    display: none;
+                }
+                &__options {
+                    width: auto;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    gap: 35px;
+                    & li {
+                        border: none;
+                        font-size: 1.4rem;
+                        & a {
+                            color: $very-dark-blue;
+                        }
+                        & button {
+                            font-size: 1.4rem;
+                            border: none;
+                            background-color: $soft-red;
+                            cursor: pointer;
+                            font-weight: 700;
+                            padding: 0px 35px;
+                            height: 45px;
+                        }
+                    }
                 }
             }
         }

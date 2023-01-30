@@ -17,10 +17,6 @@ body {
   width: 100vw;
 }
 
-.inactive {
-  display: none;
-}
-
 .header, .header__menu-container__menu--close {
   width: 100%;
   display: flex;
@@ -29,7 +25,7 @@ body {
   align-items: center;
 }
 .header__menu-container__menu {
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   position: absolute;
@@ -47,6 +43,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   list-style: none;
   letter-spacing: 0.12em;
 }
@@ -84,4 +81,52 @@ body {
 }
 .header__menu-container__menu__redes img {
   padding: 25px;
+}
+
+@media (min-width: 1440px) {
+  .header, .header__menu-container__menu--close {
+    padding: 30px 100px;
+  }
+  .header__menu-container--open {
+    display: none;
+  }
+  .header__menu-container__menu {
+    display: flex;
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
+  .header__menu-container__menu--close {
+    display: none;
+  }
+  .header__menu-container__menu__redes {
+    display: none;
+  }
+  .header__menu-container__menu__options {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 35px;
+  }
+  .header__menu-container__menu__options li {
+    border: none;
+    font-size: 1.4rem;
+  }
+  .header__menu-container__menu__options li a {
+    color: hsl(229deg, 31%, 21%);
+  }
+  .header__menu-container__menu__options li button {
+    font-size: 1.4rem;
+    border: none;
+    background-color: hsl(0deg, 94%, 66%);
+    cursor: pointer;
+    font-weight: 700;
+    padding: 0px 35px;
+    height: 45px;
+  }
+}
+.active {
+  display: flex;
 }
